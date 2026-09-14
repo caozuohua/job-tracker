@@ -1,39 +1,6 @@
 import { database } from '@/lib/db';
 import { validateRecord } from '@/lib/model';
-/**
- * One-time cleanup for unambiguous data-quality issues found during the
- * application audit. This is intentionally idempotent and will be removed
- * immediately after the cleanup run is verified.
- */
-async function normalizeCertainRecords(){
- const db=database();
- const rows=await db.prepare("SELECT id,kind,data,revision FROM records WHERE kind='application'").all();
- const updates:any[]=[];
- const trimKeys=['company','role','date','status','resumeId','resumeName','location','salary','source','url','contact','notes'];
- for(const row of (rows.results as any[])){
-  let d:any;
-  try{d=JSON.parse(row.data)}catch{continue}
-  let changed=false;
-  for(const key of trimKeys){
-   if(typeof d[key]==='string'){
-    const value=d[key].trim();
-    if(value!==d[key]){d[key]=value;changed=true}
-   }
-  }
-  if(d.source!=='BOSS'){d.source='BOSS';changed=true}
-  if(d.role==='华南区域saas企业效能顾问'){d.role='华南区域 SaaS 企业效能顾问';changed=true}
-  if(d.role==='解决方案/架构师（云计算/iaas/云业务）'){d.role='解决方案/架构师（云计算/IaaS/云业务）';changed=true}
-  if(d.role==='高级解决方案工程师4272'){d.role='高级解决方案工程师（4272）';changed=true}
-  if(d.notes==='曹佐华-科大讯飞客户销售.docx\n已读不回'){d.notes='已读不回';changed=true}
-  if(d.notes==='曹佐华-行业智能解决方案销售 0908.docx\n已读不回'){d.notes='已读不回';changed=true}
-  if(changed){
-   updates.push(db.prepare('UPDATE records SET data=?, revision=revision+1, updated_at=? WHERE id=? AND revision=? AND kind=?').bind(JSON.stringify(d),new Date().toISOString(),row.id,row.revision,'application'));
-  }
- }
- if(updates.length)await db.batch(updates);
- return updates.length;
-}
-export async function GET(){try{await normalizeCertainRecords();const r=await database().prepare('SELECT * FROM records ORDER BY updated_at DESC').all();return Response.json(r.results.map((r:any)=>({...r,data:JSON.parse(r.data)})),{headers:{'Cache-Control':'no-store'}})}catch{return Response.json({error:'暂时无法加载记录，请稍后重试'},{status:500})}}
+export async function GET(){try{const r=await database().prepare('SELECT * FROM records ORDER BY updated_at DESC').all();return Response.json(r.results.map((r:any)=>({...r,data:JSON.parse(r.data)})),{headers:{'Cache-Control':'no-store'}})}catch{return Response.json({error:'暂时无法加载记录，请稍后重试'},{status:500})}}
 export async function POST(req:Request){return mutate(req,false)}
 export async function PUT(req:Request){return mutate(req,true)}
 async function mutate(req:Request,edit:boolean){try{if(req.headers.get('origin')&&req.headers.get('origin')!==new URL(req.url).origin)return Response.json({error:'请求来源无效'},{status:403});const body=await req.text();if(body.length>200000)throw new Error('记录内容过长');const b=JSON.parse(body);const data=validateRecord(b.kind,b.data);const db=database();const now=new Date().toISOString();let id=crypto.randomUUID();let revision=1;
