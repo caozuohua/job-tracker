@@ -1,4 +1,6 @@
 export const statuses=['待投递','已投递','笔试 / 作业','面试中','等待反馈','Offer','未通过','已撤回'];
+export const applicationSources=['LinkedIn','Boss直聘','猎聘','脉脉'];
+export function normalizeSource(source:string){const value=source.trim();return /^(boss|boss直聘|bs)$/i.test(value)?'Boss直聘':/^linkedin$/i.test(value)?'LinkedIn':value;}
 export type Task={id:string;title:string;due:string;done:boolean};
 export type Interview={id:string;round:string;time:string;method:string;notes:string};
 export type Application={company:string;role:string;date:string;status:string;resumeId:string;resumeName:string;location:string;salary:string;source:string;url:string;contact:string;notes:string;tasks:Task[];interviews:Interview[];history:{date:string;status:string}[]};
