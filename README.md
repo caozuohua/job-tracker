@@ -4,6 +4,12 @@
 
 投递渠道预置 LinkedIn、Boss直聘、猎聘、脉脉；兼容历史 BOSS 渠道及其他已保存渠道。
 
+<img width="1917" height="825" alt="屏幕截图 2026-09-18 155007" src="https://github.com/user-attachments/assets/3ebbaa98-9b24-4557-b1ee-c13ef7e36b9b" />
+
+<img width="1919" height="824" alt="屏幕截图 2026-09-18 154657" src="https://github.com/user-attachments/assets/606c6cf1-1891-4b2c-9be6-d89913537bd9" />
+
+
+
 ## 技术栈
 
 React、TypeScript、Vinext / Vite、Cloudflare Workers 与 D1。线上由 Sites 托管并提供访问控制，GitHub 用于源码版本管理。
