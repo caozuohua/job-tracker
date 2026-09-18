@@ -1,0 +1,79 @@
+<svg width="1600" height="760" viewBox="0 0 1600 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="760" fill="#F5F7FB"/>
+  <rect x="40" y="28" width="1520" height="704" rx="24" fill="white" stroke="#E6EAF2"/>
+  <rect x="74" y="62" width="250" height="48" rx="12" fill="#EEF4FF"/>
+  <circle cx="110" cy="86" r="18" fill="#2D6CFF"/>
+  <path d="M103 86L108 92L120 79" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="142" y="92" fill="#183153" font-size="26" font-family="Arial, sans-serif" font-weight="700">投递手记</text>
+
+  <g opacity="0.9">
+    <rect x="76" y="140" width="220" height="90" rx="16" fill="#F6F9FF"/>
+    <text x="96" y="176" fill="#7083A6" font-size="15" font-family="Arial, sans-serif">全部投递</text>
+    <text x="96" y="210" fill="#183153" font-size="34" font-family="Arial, sans-serif" font-weight="700">24</text>
+  </g>
+  <g opacity="0.9">
+    <rect x="320" y="140" width="220" height="90" rx="16" fill="#F6F9FF"/>
+    <text x="340" y="176" fill="#7083A6" font-size="15" font-family="Arial, sans-serif">面试进行中</text>
+    <text x="340" y="210" fill="#183153" font-size="34" font-family="Arial, sans-serif" font-weight="700">6</text>
+  </g>
+  <g opacity="0.9">
+    <rect x="564" y="140" width="220" height="90" rx="16" fill="#F6F9FF"/>
+    <text x="584" y="176" fill="#7083A6" font-size="15" font-family="Arial, sans-serif">已获 Offer</text>
+    <text x="584" y="210" fill="#183153" font-size="34" font-family="Arial, sans-serif" font-weight="700">2</text>
+  </g>
+
+  <rect x="76" y="260" width="920" height="420" rx="18" fill="#F8FAFF" stroke="#E6EAF2"/>
+  <rect x="96" y="282" width="270" height="52" rx="12" fill="#EEF4FF"/>
+  <text x="120" y="314" fill="#183153" font-size="20" font-family="Arial, sans-serif" font-weight="700">应用记录</text>
+  <rect x="388" y="282" width="260" height="52" rx="12" fill="#FFFFFF" stroke="#D7E1F3"/>
+  <text x="412" y="314" fill="#6B7B9A" font-size="18" font-family="Arial, sans-serif">搜索公司、岗位或简历</text>
+
+  <g>
+    <rect x="96" y="356" width="860" height="54" rx="12" fill="#FFFFFF" stroke="#E6EAF2"/>
+    <text x="118" y="389" fill="#183153" font-size="18" font-family="Arial, sans-serif" font-weight="700">字节跳动</text>
+    <text x="310" y="389" fill="#5B6D8E" font-size="18" font-family="Arial, sans-serif">后端开发工程师</text>
+    <rect x="610" y="370" width="116" height="24" rx="12" fill="#EAF3FF"/>
+    <text x="645" y="387" fill="#2D6CFF" font-size="13" font-family="Arial, sans-serif" font-weight="700">面试中</text>
+    <text x="760" y="389" fill="#5B6D8E" font-size="18" font-family="Arial, sans-serif">2026-09-18</text>
+  </g>
+
+  <g>
+    <rect x="96" y="420" width="860" height="54" rx="12" fill="#FFFFFF" stroke="#E6EAF2"/>
+    <text x="118" y="453" fill="#183153" font-size="18" font-family="Arial, sans-serif" font-weight="700">阿里云</text>
+    <text x="310" y="453" fill="#5B6D8E" font-size="18" font-family="Arial, sans-serif">前端工程师</text>
+    <rect x="610" y="434" width="116" height="24" rx="12" fill="#E8F9F0"/>
+    <text x="645" y="451" fill="#1FA163" font-size="13" font-family="Arial, sans-serif" font-weight="700">Offer</text>
+    <text x="760" y="453" fill="#5B6D8E" font-size="18" font-family="Arial, sans-serif">2026-09-15</text>
+  </g>
+
+  <g>
+    <rect x="96" y="484" width="860" height="54" rx="12" fill="#FFFFFF" stroke="#E6EAF2"/>
+    <text x="118" y="517" fill="#183153" font-size="18" font-family="Arial, sans-serif" font-weight="700">腾讯</text>
+    <text x="310" y="517" fill="#5B6D8E" font-size="18" font-family="Arial, sans-serif">产品经理</text>
+    <rect x="610" y="498" width="116" height="24" rx="12" fill="#FDEDED"/>
+    <text x="645" y="515" fill="#D14A4A" font-size="13" font-family="Arial, sans-serif" font-weight="700">未通过</text>
+    <text x="760" y="517" fill="#5B6D8E" font-size="18" font-family="Arial, sans-serif">2026-09-11</text>
+  </g>
+
+  <rect x="1036" y="260" width="470" height="420" rx="18" fill="#F8FAFF" stroke="#E6EAF2"/>
+  <rect x="1060" y="282" width="180" height="42" rx="12" fill="#EEF4FF"/>
+  <text x="1096" y="309" fill="#183153" font-size="19" font-family="Arial, sans-serif" font-weight="700">下一步行动</text>
+
+  <g>
+    <rect x="1060" y="342" width="420" height="82" rx="16" fill="#FFFFFF" stroke="#E6EAF2"/>
+    <circle cx="1096" cy="383" r="11" fill="#2D6CFF"/><text x="1120" y="390" fill="#183153" font-size="18" font-family="Arial, sans-serif">准备 2 轮技术面复盘</text>
+    <text x="1138" y="410" fill="#7A8AA8" font-size="14" font-family="Arial, sans-serif">截止：2026-09-19</text>
+  </g>
+
+  <g>
+    <rect x="1060" y="438" width="420" height="82" rx="16" fill="#FFFFFF" stroke="#E6EAF2"/>
+    <circle cx="1096" cy="479" r="11" fill="#1FA163"/><text x="1120" y="486" fill="#183153" font-size="18" font-family="Arial, sans-serif">补充 Offer 相关材料</text>
+    <text x="1138" y="506" fill="#7A8AA8" font-size="14" font-family="Arial, sans-serif">截止：2026-09-20</text>
+  </g>
+
+  <g>
+    <rect x="1060" y="534" width="420" height="82" rx="16" fill="#FFFFFF" stroke="#E6EAF2"/>
+    <circle cx="1096" cy="575" r="11" fill="#F0A449"/><text x="1120" y="582" fill="#183153" font-size="18" font-family="Arial, sans-serif">联系 HR 确认面试流程</text>
+    <text x="1138" y="602" fill="#7A8AA8" font-size="14" font-family="Arial, sans-serif">截止：2026-09-22</text>
+  </g>
+</svg>
